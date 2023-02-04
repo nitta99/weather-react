@@ -2,10 +2,10 @@ export const GetWeather = () => {
   // 選択されたドロップダウンのValueを取得
   const area = document.getElementById("area").value;
   // 入力チェック
-  if (area === "") {
-    alert("エリアが指定されていません");
-    return;
-  }
+  // if (area === "") {
+  //   alert("エリアが指定されていません");
+  //   return;
+  // }
 
   // 気象庁の天気予報APIのURL
   const api_url = `https://www.jma.go.jp/bosai/forecast/data/forecast/${area}.json`;

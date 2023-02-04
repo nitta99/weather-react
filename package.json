@@ -1,16 +1,14 @@
 {
-  "name": "react-typescript",
+  "name": "weather-react",
   "version": "1.0.0",
-  "description": "React and TypeScript example starter project",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
+    "@hookform/resolvers": "2.9.10",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-hook-form": "7.43.0",
     "react-is": "18.2.0",
     "react-router-dom": "6.8.0",
     "react-scripts": "4.0.3"

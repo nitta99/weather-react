@@ -1,10 +1,23 @@
 import React from "react";
+import { SeachButton } from "./SeachButton";
+import { useForm } from "react-hook-form";
 
 export const DropDown = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+  };
   return (
-    <form>
-      <select id="area" name="area">
-        <option value="">選択してください</option>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <select id="area" name="area" {...register("to", { required: true })}>
+        <option value="" hidden>
+          選択してください
+        </option>
         <option value="011000">宗谷地方</option>
         <option value="012000">上川・留萌地方</option>
         <option value="016000">石狩・空知・後志地方</option>
@@ -62,6 +75,8 @@ export const DropDown = () => {
         <option value="473000">宮古島地方</option>
         <option value="474000">八重山地方</option>
       </select>
+      <SeachButton />
+      {errors.to && <p>エリアを指定してください</p>}
     </form>
   );
 };
